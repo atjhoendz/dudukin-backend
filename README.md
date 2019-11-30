@@ -3,23 +3,23 @@
 ### `Using: ExpressJS, MongoDB`
 <hr>
 
-### List of routes
+## List of routes
 
-#### Auth
+### Auth
 | Route | Method | Description |
 | :---- | :----- | :---------- |
 | `/api/login` | POST | User login |
 | `/api/register` | POST | User register |
 
-#### User
+### User
 | Route | Method | Description |
 | :---- | :----- | :---------- |
 | `/api/users/getAllUser` | GET | Get all the users |
 
-#### To be Continued
+### To be Continued
 `...`
 
-### Usage
+## Usage
 ```
 sudo service mongod start
 npm install
