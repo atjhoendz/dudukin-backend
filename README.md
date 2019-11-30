@@ -16,7 +16,7 @@
 | :---- | :----- | :---------- |
 | `/api/users/getAllUser` | GET | Get all the users |
 
-#### Continued
+#### To be Continued
 `...`
 
 ### Usage
