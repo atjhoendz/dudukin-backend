@@ -1,7 +1,29 @@
-# dudukin-backend
-Dudukin - Backend (ExpressJS, MongoDB)
+# REST-API Duduk.in
 
------------------------------
+### `Using: ExpressJS, MongoDB`
+<hr>
+
+### List of routes
+
+#### Auth
+| Route | Method | Description |
+| :---- | :----- | :---------- |
+| `/api/login` | POST | User login |
+| `/api/register` | POST | User register |
+
+#### User
+| Route | Method | Description |
+| :---- | :----- | :---------- |
+| `/api/users/getAllUser` | GET | Get all the users |
+
+#### Continued
+`...`
+
+### Usage
+```
+sudo service mongod start
+npm install
 npm start
 
-http://localhost:8081
+```
+Access : http://localhost:8081/api
