@@ -17,13 +17,13 @@ Access : http://localhost:8081/api
 
 - **Auth**
 | Route | HTTP Method | Description | Required Field |
-| :---- | :----- | :---------- | :------------- |
+| :---- | :----------- | :---------- | :------------- |
 | `/api/login` | POST | User login | `email,password` |
 | `/api/register` | POST | User register | `email,password` default role : user |
 
 - **User**
 | Route | HTTP Method | Description | Required Field |
-| :---- | :----- | :---------- | :------------- |
+| :---- | :---------- | :---------- | :------------- |
 | `/api/users/getAllUser` | GET | Get all the users | - |
 | `/api/users/find/key/value` | GET | Find with key and value parameters | - |
 | `/api/users/delete/id` | DELETE | Delete spesific user by id | - |
