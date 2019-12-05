@@ -15,7 +15,7 @@ Access : http://localhost:8081/api
 
 ## List of routes
 
-- **Auth**
+- **Auth** <br>
 | Route | HTTP Method | Description | Required Field |
 | :---- | :----------- | :---------- | :------------- |
 | `/api/login` | POST | User login | `email,password` |
