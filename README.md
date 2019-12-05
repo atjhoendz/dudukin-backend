@@ -16,12 +16,14 @@ Access : http://localhost:8081/api
 ## List of routes
 
 - **Auth**
+
 | Route | HTTP Method | Description | Required Field |
 | :---- | :---------: | :---------- | :------------- |
 | `/api/login` | POST | User login | `email,password` |
 | `/api/register` | POST | User register | `email,password` default role : user |
 
 - **User**
+
 | Route | HTTP Method | Description | Required Field |
 | :---- | :---------: | :---------- | :------------- |
 | `/api/users/getAllUser` | GET | Get all the users | - |
@@ -32,6 +34,7 @@ Access : http://localhost:8081/api
 | `/api/users/update/pwd/id` | PUT | Update spesific user passsword by id | `oldPwd, confirm_oldPwd, newPwd` |
 
 - **Merchant**
+
 | Route | HTTP Method | Description | Required Field |
 | :---- | :---------: | :---------- | :------------ |
 | `/api/merchant/getAll` | GET | Get all the merchant | - |
