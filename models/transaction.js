@@ -6,6 +6,8 @@ var TransactionSchema = new Schema({
   id_merchant: ObjectId,
   id_meja: ObjectId,
   id_product: ObjectId,
+  waktu_book: Number,
+  lama_book: Number,
   jumlah: Number,
   total: Number
 });

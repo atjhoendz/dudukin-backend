@@ -2,9 +2,10 @@ var express = require('express');
 var router = express.Router();
 var User = require('../models/user');
 var Post = require("../models/post");
-const usersRouter = require('./users');
-const { login, register } = require('../controllers/AuthController');
-const auth = require('../middleware/auth');
+var usersRouter = require('./users');
+var merchantRouter = require('./merchant');
+var { login, register } = require('../controllers/AuthController');
+var auth = require('../middleware/auth');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,7 +14,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/login', login);
 router.post('/register', register);
-router.use('/users', auth.isAuth, usersRouter);
+// router.use('/users', auth.isAuth, usersRouter);
+router.use('/users', usersRouter);
+router.use('/merchant', merchantRouter);
 
 // Post
 

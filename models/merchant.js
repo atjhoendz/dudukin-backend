@@ -5,9 +5,9 @@ var MerchantSchema = new Schema({
   nama: String,
   deskripsi: String,
   alamat: String,
-  waktu_buka: String,
-  waktu_tutup: String,
-  status: String
+  waktu_buka: Number,
+  waktu_tutup: Number
+  // status: String
 });
 
 var Merchant = mongoose.model('Merchant', MerchantSchema, 'Merchant');
