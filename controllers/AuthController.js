@@ -22,6 +22,7 @@ module.exports = {
             });
           }).catch((err) => {
             res.status(500).json({
+              success: false,
               message: err.message
             });
           });
@@ -29,33 +30,38 @@ module.exports = {
       } else {
         res.status(200).json({
           success: false,
-          message: 'Register gagal, data sudah tersedia',
-          hasil
+          message: 'Register gagal, data sudah tersedia'
         });
       }
     });
   },
   login: (req, res) => {
+    var email = req.body.email;
+    var pwd = req.body.password;
     User.findOne({
       email: req.body.email
-    }).then((user) => {
+    }).orFail().then((user) => {
       const checkLogin = bcrypt.compareSync(req.body.password, user.password);
       if(checkLogin){
         var token = jwt.sign({ id: user._id, role: user.role }, process.env.SECRET_KEY);
         if(token){
           res.status(200).json({
+            success: true,
             message: "Login Berhasil",
-            token: token
+            token: token,
+            user
           });
         }
       }else{
         res.status(200).json({
+          success: false,
           message: "Login tidak berhasil, username atau password salah"
         });
       }
     }).catch((err) => {
       res.status(200).json({
-        message: err.message
+        success: false,
+        message: "Username atau password belum terdaftar"
       });
     });
   }
