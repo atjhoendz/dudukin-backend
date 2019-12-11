@@ -1,6 +1,6 @@
 # REST-API Duduk.in
 
-### `Using: ExpressJS, MongoDB`
+### `Using: ExpressJS, MongoDB, JWT Authentication`
 <hr>
 
 ## Usage
